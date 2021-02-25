@@ -6,6 +6,8 @@ streamline the computation of ABF activities as per the National Efficient Price
 - non-admitted
 - emergency department or emergency service
 
+**Documentation**: [fastABF doc](https://greenlakemedical.github.io/fastABF/)
+
 ---
 ## Features
 
