@@ -18,12 +18,12 @@ streamline the computation of ABF activities as per the National Efficient Price
 - **HAC adjustment computations** - The detailed steps of the HAC computations 
 - **Remoteness calculations** - The detailed steps of the remoteness calculations (from postcode and SA2 address have been incorporated to enable automatic mapping to the RA16 remoteness class)
 
-* based on the experience of the internal dev-team and bugs caught and resolved via type checking and testing during development.
-*[HAC]: hosptial acquired complications
-*[IHPA]: Independent hospital pricing authority
-*[METeOR]:  Metadata online registry 
-*[ABF]: Activity based funding
-*[NEP]: National efficient price
+<small>* based on the experience of the internal dev-team and bugs caught and resolved via type checking and testing during development.
+- [HAC]: hosptial acquired complications
+- [IHPA]: Independent hospital pricing authority
+- [METeOR]:  Metadata online registry 
+- [ABF]: Activity based funding
+- [NEP]: National efficient price
 
 It is assumed that you are familiar with 
     - python 
