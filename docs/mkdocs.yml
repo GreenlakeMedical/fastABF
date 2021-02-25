@@ -1,0 +1,37 @@
+site_name:  fastABF
+theme:
+        name: material
+
+        features:
+                - navigation.sections
+                - navigation.indexes
+        
+        favicon: images/favicon.png
+
+plugins:
+        - search
+
+
+markdown_extensions:
+        - admonition
+        - abbr
+        - footnotes
+        - pymdownx.highlight
+        - pymdownx.superfences
+
+
+repo_url: https://github.com/GreenlakeMedical/fastABF
+
+extra:
+  social:
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<contact@greenlakemedical.ai>
+
+copyright: Copyright &copy; 2020 - 2021 GreenlakeMedical
+
+
+nav:
+- fastABF: index.md
+- detailedintro.md
+- globalvariables.md
+- contributors.md

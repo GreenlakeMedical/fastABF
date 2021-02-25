@@ -1,0 +1,1 @@
+::: nwauapi.datatypes.StayCategory
