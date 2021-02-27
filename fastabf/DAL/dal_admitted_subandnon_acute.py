@@ -1,10 +1,9 @@
 import re
 
-
 import pandas as pd
 
 from fastabf.DAL import dal_private_patient_adj
-from fastabf.datatypes import (Care_Type, StayCategory,
+from fastabf.datatypes import (Care_Type, Stay_Category,
                                care_type_to_caretypemapper)
 
 try:
@@ -103,7 +102,7 @@ def get_short_say_outlier_perdiem(an_snap_v4: str) -> float:
 
 def helper_get_stay_category(
     an_snap_v4: str, bool_same_day_flag: bool,
-        los_days: int) -> StayCategory:
+        los_days: int) -> Stay_Category:
     """Generates stay category from AN_SNAP_v4 and same day flag
 
     Arguments:
@@ -119,27 +118,27 @@ def helper_get_stay_category(
     """
     # same day stay cat
     if bool_same_day_flag and bool_is_same_day_ansnap(an_snap_v4):
-        stay_cat = StayCategory.same_day
+        stay_cat = Stay_Category.same_day
 
     else:
         ansnaplowerbound, ansnapupperbound = get_ansnap_stay_bounds(
             an_snap_v4)
 
         if los_days < ansnaplowerbound:
-            stay_cat = StayCategory.short_stay_outlier
+            stay_cat = Stay_Category.short_stay_outlier
 
         elif ansnaplowerbound <= los_days <= ansnapupperbound:
-            stay_cat = StayCategory.inlier
+            stay_cat = Stay_Category.inlier
 
         elif los_days > ansnapupperbound:
-            stay_cat = StayCategory.long_stay_outlier
+            stay_cat = Stay_Category.long_stay_outlier
         else:
             raise ValueError("unexpected case")
 
     return stay_cat
 
 
-def get_base_nwau(an_snap_v4: str, stay_cat: StayCategory,
+def get_base_nwau(an_snap_v4: str, stay_cat: Stay_Category,
                   los_days: float) -> float:
     """Returns the base NWAU from the relevant tables.
 
@@ -151,17 +150,17 @@ def get_base_nwau(an_snap_v4: str, stay_cat: StayCategory,
     Returns:
         [float] -- base NWAU with length of stay based adjustments
     """
-    if stay_cat == StayCategory.same_day:
+    if stay_cat == Stay_Category.same_day:
         base_pw = get_same_day_pw(an_snap_v4)
-    elif stay_cat == StayCategory.short_stay_outlier:
+    elif stay_cat == Stay_Category.short_stay_outlier:
         short_stay_outlier_perdiem = get_short_say_outlier_perdiem(an_snap_v4)
 
         base_pw = (
             short_stay_outlier_perdiem * los_days
         )
-    elif stay_cat == StayCategory.inlier:
+    elif stay_cat == Stay_Category.inlier:
         base_pw = get_inlier_pw(an_snap_v4)
-    elif stay_cat == StayCategory.long_stay_outlier:
+    elif stay_cat == Stay_Category.long_stay_outlier:
         inlier_pw = get_inlier_pw(an_snap_v4)
         _, upper_bound = get_ansnap_stay_bounds(
             an_snap_v4)

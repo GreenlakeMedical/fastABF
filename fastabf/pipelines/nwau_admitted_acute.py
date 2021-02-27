@@ -9,7 +9,7 @@ from fastabf.DAL import admitted_acute_helper, dal_admitted_acute
 from fastabf.datatypes import (HOSP_PAED_FLAG, ABF_Service_Category, Care_Type,
                                Indigenous_Status_Category,
                                Remoteness_Category_RA16, Sex_Category,
-                               StayCategory, global_NEP, hosp_level3ICU_flag,
+                               Stay_Category, global_NEP, hosp_level3ICU_flag,
                                hosp_state_constant)
 from fastabf.HACpackage import hac_processor
 from fastabf.HACpackage.hac_processor import HAC_Category, MDC_Type
