@@ -180,10 +180,10 @@ These user friendly classes and routines can be found at the following locations
     └── helper_remoteness_mappings.py (computes remoteness categories)
 ```
 The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
-Similarly hte remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. 
+Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. 
 
 #### Data types
-The datatypes module contains user friendly mappings to several of the METeOR classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on data types.
+The `datatypes` module contains user friendly mappings to several of the METeOR classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on data types.
 ``` python
 class Sex_Category(Enum):
 class MDC_Type(Enum):
