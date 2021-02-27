@@ -9,7 +9,7 @@ from fastabf.DAL import dal_admitted_subandnon_acute
 from fastabf.datatypes import (HOSP_PAED_FLAG, ABF_Service_Category, Care_Type,
                                Indigenous_Status_Category,
                                Remoteness_Category_RA16, Sex_Category,
-                               StayCategory, global_NEP, hosp_level3ICU_flag,
+                               Stay_Category, global_NEP, hosp_level3ICU_flag,
                                hosp_state_constant)
 from fastabf.Helpers import helper_remoteness_mappings as remotenessmapper
 
@@ -23,8 +23,6 @@ class Admitted_Subacute_Record:
         AN_SNAP_v4: str,
 
         # [METeOR id: 269976] True if admitted patient transferred from another hospital.
-        # bool_transfer_status: bool,
-        # sex: int,  # [METeOR id: 635126]
 
         # [METeOR id: 269986] True if admission occurred on an emergency basis
         patient_leave_days: float = 0,
@@ -55,8 +53,6 @@ class Admitted_Subacute_Record:
         self.__adjustments: Dict = dict()
         self.__abf_service_cat = ABF_Service_Category.admitted_acute
         self.__patient_leave_days = patient_leave_days
-        # self.__bool_transfer_status = bool_transfer_status
-        # self.__Psych_Days = Psych_Days
         self.__Pat_Postcode = Pat_Postcode
         self.__Pat_SA2 = Pat_SA2
         self.__Pat_Radiotherapy_Flag = Pat_Radiotherapy_Flag
@@ -68,13 +64,6 @@ class Admitted_Subacute_Record:
             self.__EST_Remoteness_Cat = EST_Remoteness_Cat
         else:
             raise ValueError("Invalid EST_Remoteness")
-
-        # self.__bool_is_emergency_admission = bool_is_emergency_admission
-        # self.__bool_foetal_distress_flag = bool_foetal_distress_flag
-        # self.__bool_instrument_use_flag = bool_instrument_use_flag
-        # self.__bool_ppop_flag = bool_ppop_flag
-        # self.__bool_prima_flag = bool_prima_flag
-        # self.__sex_category = Sex_Category(sex)
 
         self.__Indigenous_Status = Indigenous_Status
         try:

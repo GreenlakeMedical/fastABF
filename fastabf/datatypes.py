@@ -3,7 +3,10 @@ from enum import Enum
 
 
 class Sex_Category(Enum):
-    # METeOR id: 635126
+    """
+    # METeOR id: 635126  
+
+    """
     Male = 1
     Female = 2
     Other = 3
@@ -20,6 +23,9 @@ class Sex_Category(Enum):
 
 
 class MDC_Type(Enum):
+    """
+    This class describes the various MDC types
+    """
     diseases_and_disorders_of_the_nervous_system = 1
     diseases_and_disorders_of_the_eye = 2
     diseases_and_disorders_of_the_ear_nose_mouth_and_throat = 3
@@ -114,10 +120,12 @@ class Hosp_State_Category(Enum):
 
 
 class Care_Type_General(Enum):  # METeOR id: 270174
-    # Patient Care Type - The overall nature of a clinical service provided to an
-    # admitted patient during an episode of care (admitted care), or the type of
-    # service provided by the hospital for boarders or posthumous organ procurement
-    # (other care), as represented by a code.
+    """
+    Patient Care Type - The overall nature of a clinical service provided to an
+    admitted patient during an episode of care (admitted care), or the type of
+    service provided by the hospital for boarders or posthumous organ procurement
+    (other care), as represented by a code.
+    """
     acute_care_admitted_care = 01.0
     rehabilitation_care_cannot_be_further_categorised = 02.0
     rehabilitation_care_delivered_in_designated_unit = 02.1
@@ -147,9 +155,12 @@ class Care_Type_General(Enum):  # METeOR id: 270174
         return hash(self.name)
 
 
-class Care_Type(Enum):  # As the original METeOR id: 270174 has
-    # several care types that have no mappings to be used here, we create a
-    # restricted version to avoid confusion
+class Care_Type(Enum):
+    """
+    As the original METeOR id: 270174 has
+    several care types that have no mappings to be used here, we create a
+    restricted version to avoid confusion
+    """
     acute_care_admitted_care = 01.0
     rehabilitation_care_cannot_be_further_categorised = 02.0
     palliative_care_cannot_be_further_categorised = 03.0
@@ -184,7 +195,7 @@ class Indigenous_Status_Category(Enum):
         return hash(self.name)
 
 
-class StayCategory(Enum):
+class Stay_Category(Enum):
     same_day = 0
     short_stay_outlier = 1
     inlier = 2

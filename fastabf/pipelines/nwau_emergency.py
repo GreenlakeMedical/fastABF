@@ -9,7 +9,7 @@ from fastabf.DAL import dal_emergency
 from fastabf.datatypes import (HOSP_PAED_FLAG, ABF_Service_Category, Care_Type,
                                Indigenous_Status_Category,
                                Remoteness_Category_RA16, Sex_Category,
-                               StayCategory, global_NEP, hosp_level3ICU_flag,
+                               Stay_Category, global_NEP, hosp_level3ICU_flag,
                                hosp_state_constant)
 from fastabf.Helpers import helper_remoteness_mappings as remotenessmapper
 
