@@ -1,6 +1,6 @@
 # Global variables
 
-As the fastABF module was created for use by health care providers, there are certain specific variables that do not change from one function call to the other -but which are used
+As the fastABF module was created for use by health care providers, there are certain specific variables that do not change from one function call to the other, but which are used
 in the ABF computations. These are as indicated below
 
 ## Constants fixed for the hospital during setup
@@ -14,5 +14,5 @@ The following are constants that can be initialised during setup and take their 
 | `global_NEP`          | type float                 | `NEP`                |
 
 !!! Warning
-    During initialisation please set the above environmental variables  accordingly. They 
-    affect the price computations but would not need to be changed very often.
+    During initialisation please set the above environmental variables as per your requirements. They 
+    affect the price computations but do need to be changed very often.

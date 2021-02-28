@@ -34,4 +34,6 @@ nav:
 - fastABF: index.md
 - detailedintro.md
 - globalvariables.md
-- contributors.md
+- Data types: datatypes.md
+- Helper functions: helpers.md
+- For Contributors: contributors.md
