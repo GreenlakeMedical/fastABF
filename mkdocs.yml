@@ -21,14 +21,20 @@ markdown_extensions:
 
 
 repo_url: https://github.com/GreenlakeMedical/fastABF
-
+repo_name: GitHub Repository
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:<contact@greenlakemedical.ai>
-
+    - icon: fontawesome/solid/link
+      link: https://www.greenlakemedical.ai
+    - icon: fontawesome/brands/github
+      link: https://github.com/GreenlakeMedical/fastABF/
 copyright: Copyright &copy; 2020 - 2021 GreenlakeMedical
 
+google_analytics:
+  - UA-XXXXXXXX-X
+  - auto
 
 nav:
 - fastABF: index.md
