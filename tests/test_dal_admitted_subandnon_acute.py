@@ -2,7 +2,7 @@ import numpy as np
 
 import pytest
 from fastabf.DAL import dal_admitted_subandnon_acute
-from fastabf.datatypes import Care_Type, StayCategory
+from fastabf.datatypes import Care_Type, Stay_Category
 
 
 def test_get_private_patient_service_adjustment():
@@ -78,7 +78,7 @@ def test_helper_get_stay_category_sameday():
             an_snap_v4='4J01',
             bool_same_day_flag=True,
             los_days=1)
-        == StayCategory.same_day
+        == Stay_Category.same_day
     )
 
 
@@ -88,7 +88,7 @@ def test_helper_get_stay_category_inlier():
             an_snap_v4='4F01',
             bool_same_day_flag=False,
             los_days=25)
-        == StayCategory.inlier
+        == Stay_Category.inlier
     )
 
     assert (
@@ -96,7 +96,7 @@ def test_helper_get_stay_category_inlier():
             an_snap_v4='4F01',
             bool_same_day_flag=False,
             los_days=14)  # on the boundary
-        == StayCategory.inlier
+        == Stay_Category.inlier
     )
 
 
@@ -106,7 +106,7 @@ def test_helper_get_stay_category_short_stay_outlier():
             an_snap_v4='4F01',
             bool_same_day_flag=False,
             los_days=13)
-        == StayCategory.short_stay_outlier
+        == Stay_Category.short_stay_outlier
     )
 
 
@@ -116,7 +116,7 @@ def test_helper_get_stay_category_long_stay_outlier():
             an_snap_v4='4F01',
             bool_same_day_flag=False,
             los_days=34)
-        == StayCategory.long_stay_outlier
+        == Stay_Category.long_stay_outlier
     )
 
 

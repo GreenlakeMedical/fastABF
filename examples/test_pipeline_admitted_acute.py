@@ -27,3 +27,7 @@ def example_pipeline_admitted_acute():
     )
     abf_price = aar.get_abf_price()
     print(f"The abf price is {abf_price}")
+
+
+if __name__ == "__main__":
+    example_pipeline_admitted_acute()
