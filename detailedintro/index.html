@@ -37,8 +37,13 @@
     
     
     
-      
-    
+<!-- Panelbear Analytics - We respect your privacy -->
+<script async src="https://cdn.panelbear.com/analytics.js?site=4gxagg43U3o"></script>
+<script>
+    window.panelbear = window.panelbear || function () { (window.panelbear.q = window.panelbear.q || []).push(arguments); };
+    panelbear('config', { site: '4gxagg43U3o' });
+</script>
+
     
   </head>
   
@@ -139,7 +144,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    GitHub Repository
   </div>
 </a>
       </div>
@@ -184,7 +189,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub
+    GitHub Repository
   </div>
 </a>
     </div>
@@ -289,15 +294,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#structure-of-the-fastabf-library" class="md-nav__link">
-    Structure of the fastABF library
+  <a href="#data-types" class="md-nav__link">
+    Data types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
-    Data types
+  <a href="#helper-functions" class="md-nav__link">
+    Helper functions
   </a>
   
 </li>
@@ -343,8 +348,23 @@
   
   
     <li class="md-nav__item">
+      <a href="../datatypes/" class="md-nav__link">
+        Data types
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../contributors/" class="md-nav__link">
-        Contributors
+        For Contributors
       </a>
     </li>
   
@@ -419,15 +439,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#structure-of-the-fastabf-library" class="md-nav__link">
-    Structure of the fastABF library
+  <a href="#data-types" class="md-nav__link">
+    Data types
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#data-types" class="md-nav__link">
-    Data types
+  <a href="#helper-functions" class="md-nav__link">
+    Helper functions
   </a>
   
 </li>
@@ -537,10 +557,6 @@
         <span class="n">Separation_Date</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
         <span class="n">AN_SNAP_v4</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
 
-        <span class="c1"># [METeOR id: 269976] True if admitted patient transferred from another hospital.</span>
-        <span class="c1"># bool_transfer_status: bool,</span>
-        <span class="c1"># sex: int,  # [METeOR id: 635126]</span>
-
         <span class="c1"># [METeOR id: 269986] True if admission occurred on an emergency basis</span>
         <span class="n">patient_leave_days</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
         <span class="n">Pat_Postcode</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>  <span class="c1"># Format PCNNNN, METeOR id: 429894</span>
@@ -599,9 +615,6 @@
             <span class="n">Indigenous_Status_Category</span><span class="o">.</span><span class="n">Unknown_or_not_stated</span><span class="p">,</span>
         <span class="n">Multiple_Healthcare_Provider_Indicator</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
 
-        <span class="c1"># Set to True if the patient is an eligible private patient</span>
-        <span class="c1"># Pat_private_Flag: bool = False,</span>
-
         <span class="n">Pat_Covid19_Flag</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
             <span class="n">care_type</span><span class="p">:</span> <span class="n">Care_Type</span> <span class="o">=</span> <span class="n">Care_Type</span><span class="o">.</span><span class="n">acute_care_admitted_care</span>
 </code></pre></div>
@@ -615,29 +628,30 @@ The four <abbr title="Activity based funding">ABF</abbr> cases above are located
 </code></pre></div>
 <h3 id="convenience-functions-and-interfaces">Convenience functions and interfaces</h3>
 <p>As you may observe from the input parameters in the cases above, they use 
-specific classes/data types that were created for convenience. These convenience functions help reduce the need to remember the <abbr title="Metadata online registry">METeOR</abbr> parameter values thereby reducing errors and speeding up code development. 
-These user friendly classes and routines can be found at the following locations in the library. </p>
-<h4 id="structure-of-the-fastabf-library">Structure of the fastABF library</h4>
-<p><div class="highlight"><pre><span></span><code>.
+specific classes/data types that were created for convenience. These convenience interfaces help avoid having to remember the <abbr title="Metadata online registry">METeOR</abbr> parameter values thereby reducing errors and speeding up code development. </p>
+<p>These user friendly classes and routines can be found at the following locations in the library. </p>
+<p><strong>Structure of the fastABF library</strong> </p>
+<p>A simplified overview for users of this library is as follows
+<div class="highlight"><pre><span></span><code>.
 ├── datatypes.py (user friendly interfaces to data types used - more info below)
 ├── Helpers 
     └── charlson_class.py (computes the charlson complexity, if it is not known)
     └── helper_remoteness_mappings.py (computes remoteness categories)
-</code></pre></div>
-The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
-Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. </p>
-<h4 id="data-types">Data types</h4>
-<p>The <code>datatypes</code> module contains user friendly mappings to several of the <abbr title="Metadata online registry">METeOR</abbr> classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on data types.
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sex_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="k">class</span> <span class="nc">MDC_Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="k">class</span> <span class="nc">ABF_Service_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="k">class</span> <span class="nc">Remoteness_Category_RA16</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="k">class</span> <span class="nc">Hosp_State_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="k">class</span> <span class="nc">Care_Type_General</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>  <span class="c1"># METeOR id: 270174</span>
-<span class="k">class</span> <span class="nc">Care_Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>  <span class="c1"># As the original METeOR id: 270174 has</span>
-<span class="k">class</span> <span class="nc">Indigenous_Status_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
-<span class="k">class</span> <span class="nc">StayCategory</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
 </code></pre></div></p>
+<h4 id="data-types">Data types</h4>
+<p>The <code>datatypes</code> module contains user friendly mappings to several of the <abbr title="Metadata online registry">METeOR</abbr> classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on <a href="../datatypes/">data types</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ABF_Service_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Care_Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>  
+<span class="k">class</span> <span class="nc">Hosp_State_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Indigenous_Status_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">MDC_Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Remoteness_Category_RA16</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Sex_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Stay_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="helper-functions">Helper functions</h4>
+<p>The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
+Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. </p>
                 
               
               
@@ -706,6 +720,24 @@ Similarly the remoteness mappings help automatically use the right order of prio
       
       <a href="mailto:<contact@greenlakemedical.ai>" target="_blank" rel="noopener" title="" class="md-footer-social__link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://www.greenlakemedical.ai" target="_blank" rel="noopener" title="www.greenlakemedical.ai" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/GreenlakeMedical/fastABF/" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
       </a>
     
   </div>

@@ -14,7 +14,7 @@
     
     
       
-        <title>Global variables - fastABF</title>
+        <title>Data types - fastABF</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#global-variables" class="md-skip">
+        <a href="#overview-of-data-types" class="md-skip">
           Skip to content
         </a>
       
@@ -95,7 +95,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Global variables
+              Data types
             
           </span>
         </div>
@@ -232,6 +232,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../globalvariables/" class="md-nav__link">
+        Global variables
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -243,12 +258,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Global variables
+          Data types
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Global variables
+        Data types
       </a>
       
         
@@ -265,8 +280,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#constants-fixed-for-the-hospital-during-setup" class="md-nav__link">
-    Constants fixed for the hospital during setup
+  <a href="#sex_category" class="md-nav__link">
+    Sex_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mdc_type" class="md-nav__link">
+    MDC_Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abf_service_category" class="md-nav__link">
+    ABF_Service_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remoteness_category_ra16" class="md-nav__link">
+    Remoteness_Category_RA16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosp_state_category" class="md-nav__link">
+    Hosp_State_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#care_type_general" class="md-nav__link">
+    Care_Type_General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#care_type" class="md-nav__link">
+    Care_Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indigenous_status_category" class="md-nav__link">
+    Indigenous_Status_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay_category" class="md-nav__link">
+    Stay_Category
   </a>
   
 </li>
@@ -275,21 +346,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../datatypes/" class="md-nav__link">
-        Data types
-      </a>
     </li>
   
 
@@ -334,8 +390,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#constants-fixed-for-the-hospital-during-setup" class="md-nav__link">
-    Constants fixed for the hospital during setup
+  <a href="#sex_category" class="md-nav__link">
+    Sex_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mdc_type" class="md-nav__link">
+    MDC_Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abf_service_category" class="md-nav__link">
+    ABF_Service_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remoteness_category_ra16" class="md-nav__link">
+    Remoteness_Category_RA16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosp_state_category" class="md-nav__link">
+    Hosp_State_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#care_type_general" class="md-nav__link">
+    Care_Type_General
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#care_type" class="md-nav__link">
+    Care_Type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#indigenous_status_category" class="md-nav__link">
+    Indigenous_Status_Category
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stay_category" class="md-nav__link">
+    Stay_Category
   </a>
   
 </li>
@@ -352,58 +464,142 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/GreenlakeMedical/fastABF/edit/master/docs/globalvariables.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/GreenlakeMedical/fastABF/edit/master/docs/datatypes.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="global-variables">Global variables</h1>
-<p>As the fastABF module was created for use by health care providers, there are certain specific variables that do not change from one function call to the other, but which are used
-in the ABF computations. These are as indicated below</p>
-<h2 id="constants-fixed-for-the-hospital-during-setup">Constants fixed for the hospital during setup</h2>
-<p>The following are constants that can be initialised during setup and take their values from the environment. </p>
-<table>
-<thead>
-<tr>
-<th>Constant Name (in code)</th>
-<th>Description</th>
-<th>Environment variable</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>hosp_state_constant</code></td>
-<td><code>Hosp_State_Category</code></td>
-<td><code>HOSPITAL_STATE_INT</code></td>
-</tr>
-<tr>
-<td><code>HOSP_PAED_FLAG</code></td>
-<td>type bool</td>
-<td><code>HOSP_PAED_FLAG</code></td>
-</tr>
-<tr>
-<td><code>hosp_level3ICU_flag</code></td>
-<td>type bool</td>
-<td><code>HOSP_L3_ICU_FLAG</code></td>
-</tr>
-<tr>
-<td><code>global_NEP</code></td>
-<td>type float (set by default)</td>
-<td><code>NEP</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>During initialisation please set the above environmental variables as per your requirements. They 
-affect the price computations but do need to be changed very often.</p>
-</div>
-<p>You can set the <code>Environment variable</code> items named above </p>
-<ul>
-<li>via your operating system</li>
-<li>from <code>python</code></li>
-<li>or various other alternatives </li>
-</ul>
+                <h1 id="overview-of-data-types">Overview of data types</h1>
+<p>This page describes the data types defined in fastABF that are available to users. 
+Using <code>Enum</code> based classes to encode these categories enables easier programming flow as well as more readable code.</p>
+<h2 id="sex_category">Sex_Category</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Sex_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    # METeOR id: 635126  </span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Male</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Female</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">Other</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">Missing</span> <span class="o">=</span> <span class="mi">9</span>
+</code></pre></div>
+<h2 id="mdc_type">MDC_Type</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">MDC_Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This class describes the various MDC types</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">diseases_and_disorders_of_the_nervous_system</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">diseases_and_disorders_of_the_eye</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">diseases_and_disorders_of_the_ear_nose_mouth_and_throat</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">diseases_and_disorders_of_the_respiratory_system</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">diseases_and_disorders_of_the_circulatory_system</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">diseases_and_disorders_of_the_digestive_system</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">diseases_and_disorders_of_the_hepatobiliary_system_and_pancreas</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">diseases_and_disorders_of_the_musculoskeletal_system_and_connective_tissue</span> <span class="o">=</span> <span class="mi">8</span>
+    <span class="n">diseases_and_disorders_of_the_skin_subcutaneous_tissue_and_breast</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">endocrine_nutritional_and_metabolic_diseases_and_disorders</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">diseases_and_disorders_of_the_kidney_and_urinary_tract</span> <span class="o">=</span> <span class="mi">11</span>
+    <span class="n">diseases_and_disorders_of_the_male_reproductive_system</span> <span class="o">=</span> <span class="mi">12</span>
+    <span class="n">diseases_and_disorders_of_the_female_reproductive_system</span> <span class="o">=</span> <span class="mi">13</span>
+    <span class="n">pregnancy_childbirth_and_the_puerperium</span> <span class="o">=</span> <span class="mi">14</span>
+    <span class="n">newborns_and_other_neonates</span> <span class="o">=</span> <span class="mi">15</span>
+    <span class="n">diseases_and_disorders_of_blood_blood_forming_organs_immunological_disorders</span> <span class="o">=</span> <span class="mi">16</span>
+    <span class="n">neoplastic_disorders</span> <span class="o">=</span> <span class="mi">17</span>
+    <span class="n">infectious_and_parasitic_diseases</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">mental_diseases_and_disorders</span> <span class="o">=</span> <span class="mi">19</span>
+    <span class="n">alc_drug_use_and_alc_induced_organic_mental_disorders</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">injuries_poisonings_and_toxic_effects_of_drugs</span> <span class="o">=</span> <span class="s2">&quot;21B&quot;</span>
+    <span class="n">injuries_poisonings_and_toxic_effects_of_drugs_MultipleTrauma</span> <span class="o">=</span> <span class="s2">&quot;21A&quot;</span>
+    <span class="n">burns</span> <span class="o">=</span> <span class="mi">22</span>
+    <span class="n">factors_influencing_health_status_and_other_contacts_with_health_services</span> <span class="o">=</span> <span class="mi">23</span>
+    <span class="n">Error</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+</code></pre></div>
+<h2 id="abf_service_category">ABF_Service_Category</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">ABF_Service_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">admitted_acute</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">admitted_subacute</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">admitted_nonacute</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">nonadmitted</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">emergency_department</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">emergency_services</span> <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div>
+<h2 id="remoteness_category_ra16">Remoteness_Category_RA16</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Remoteness_Category_RA16</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">Unknown</span> <span class="o">=</span> <span class="mi">9</span>
+    <span class="n">Major_City</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">Inner_Regional</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Outer_Regional</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">Remote</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">Very_Remote</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Migratory</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre></div>
+<h2 id="hosp_state_category">Hosp_State_Category</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Hosp_State_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">New_South_Wales</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Victoria</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">Queensland</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">South_Australia</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Western_Australia</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">Tasmania</span> <span class="o">=</span> <span class="mi">6</span>
+    <span class="n">Northern_Territory</span> <span class="o">=</span> <span class="mi">7</span>
+    <span class="n">Australian_Capital_Territory</span> <span class="o">=</span> <span class="mi">8</span>
+</code></pre></div>
+<h2 id="care_type_general">Care_Type_General</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Care_Type_General</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>  <span class="c1"># METeOR id: 270174</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Patient Care Type - The overall nature of a clinical service provided to an</span>
+<span class="sd">    admitted patient during an episode of care (admitted care), or the type of</span>
+<span class="sd">    service provided by the hospital for boarders or posthumous organ procurement</span>
+<span class="sd">    (other care), as represented by a code.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">acute_care_admitted_care</span> <span class="o">=</span> <span class="mf">01.0</span>
+    <span class="n">rehabilitation_care_cannot_be_further_categorised</span> <span class="o">=</span> <span class="mf">02.0</span>
+    <span class="n">rehabilitation_care_delivered_in_designated_unit</span> <span class="o">=</span> <span class="mf">02.1</span>
+    <span class="n">rehabilitation_care_according_to_designated_program</span> <span class="o">=</span> <span class="mf">02.2</span>
+    <span class="n">rehabilitation_care_is_principal_clinical_intent</span> <span class="o">=</span> <span class="mf">02.3</span>
+    <span class="n">palliative_care_cannot_be_further_categorised</span> <span class="o">=</span> <span class="mf">03.0</span>
+    <span class="n">palliative_care_delivered_in_designated_unit</span> <span class="o">=</span> <span class="mf">03.1</span>
+    <span class="n">palliative_care_according_to_designated_program</span> <span class="o">=</span> <span class="mf">03.2</span>
+    <span class="n">palliative_care_is_principal_clinical_intent</span> <span class="o">=</span> <span class="mf">03.3</span>
+    <span class="n">geriatric_evaluation_and_management</span> <span class="o">=</span> <span class="mf">04.0</span>
+    <span class="n">psychogeriatric_care</span> <span class="o">=</span> <span class="mf">05.0</span>
+    <span class="n">maintenance_care</span> <span class="o">=</span> <span class="mf">06.0</span>
+    <span class="n">newborn_with_full_qualified_days</span> <span class="o">=</span> <span class="mf">07.1</span>
+    <span class="n">newborn_with_partial_qualified_days</span> <span class="o">=</span> <span class="mf">07.2</span>
+    <span class="n">other_admitted_patient_care</span> <span class="o">=</span> <span class="mf">08.0</span>
+    <span class="n">organ_procurement_posthumous</span> <span class="o">=</span> <span class="mf">09.0</span>
+    <span class="n">hospital_boarder</span> <span class="o">=</span> <span class="mf">10.0</span>
+    <span class="n">mental_health</span> <span class="o">=</span> <span class="mf">11.0</span>
+</code></pre></div>
+<h2 id="care_type">Care_Type</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Care_Type</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    As the original METeOR id: 270174 has</span>
+<span class="sd">    several care types that have no mappings to be used here, we create a</span>
+<span class="sd">    restricted version to avoid confusion</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">acute_care_admitted_care</span> <span class="o">=</span> <span class="mf">01.0</span>
+    <span class="n">rehabilitation_care_cannot_be_further_categorised</span> <span class="o">=</span> <span class="mf">02.0</span>
+    <span class="n">palliative_care_cannot_be_further_categorised</span> <span class="o">=</span> <span class="mf">03.0</span>
+    <span class="n">geriatric_evaluation_and_management</span> <span class="o">=</span> <span class="mf">04.0</span>
+    <span class="n">psychogeriatric_care</span> <span class="o">=</span> <span class="mf">05.0</span>
+    <span class="n">maintenance_care</span> <span class="o">=</span> <span class="mf">06.0</span>
+</code></pre></div>
+<h2 id="indigenous_status_category">Indigenous_Status_Category</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Indigenous_Status_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">Aboriginal_not_TSislander</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">TSislander_not_Aboriginal</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">Both_Aboriginal_and_TSislander</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">Neither_Aboriginal_nor_TSislander</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Unknown_or_not_stated</span> <span class="o">=</span> <span class="mi">9</span>
+</code></pre></div>
+<h2 id="stay_category">Stay_Category</h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Stay_Category</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">same_day</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">short_stay_outlier</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">inlier</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">long_stay_outlier</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
                 
               
               
@@ -421,7 +617,7 @@ affect the price computations but do need to be changed very often.</p>
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../detailedintro/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../globalvariables/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -430,19 +626,19 @@ affect the price computations but do need to be changed very often.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Detailed overview
+              Global variables
             </div>
           </div>
         </a>
       
       
-        <a href="../datatypes/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../contributors/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Data types
+              For Contributors
             </div>
           </div>
           <div class="md-footer__button md-icon">
