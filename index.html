@@ -426,30 +426,30 @@ streamline the computation of <abbr title="Activity based funding">ABF</abbr> ac
 </code></pre></div>
 That installs fastabf.  Now we get on with using it. </p>
 <p>Open up a python shell or notebook and type in the following (or copy-paste it from the box below)
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">fastabf</span>
-
-<span class="kn">from</span> <span class="nn">fastabf.datatypes</span> <span class="kn">import</span> <span class="p">(</span><span class="n">ABF_Service_Category</span><span class="p">,</span> <span class="n">Care_Type</span><span class="p">,</span>
-                            <span class="n">Remoteness_Category_RA16</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">fastabf.datatypes</span> <span class="kn">import</span> <span class="p">(</span><span class="n">ABF_Service_Category</span><span class="p">,</span> <span class="n">Care_Type</span><span class="p">,</span>
+                               <span class="n">Remoteness_Category_RA16</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">fastabf.pipelines.nwau_admitted_acute</span> <span class="kn">import</span> <span class="n">Admitted_Acute_Record</span>
 
-<span class="n">aar</span> <span class="o">=</span> <span class="n">fastabf</span><span class="o">.</span><span class="n">Admitted_Acute_Record</span><span class="p">(</span>
+<span class="n">aar</span> <span class="o">=</span> <span class="n">Admitted_Acute_Record</span><span class="p">(</span>
     <span class="n">Birth_Date</span><span class="o">=</span><span class="s2">&quot;23/12/1990&quot;</span><span class="p">,</span>
     <span class="n">Admission_Date</span><span class="o">=</span><span class="s2">&quot;25/09/2020&quot;</span><span class="p">,</span>
     <span class="n">Separation_Date</span><span class="o">=</span><span class="s2">&quot;30/09/2020&quot;</span><span class="p">,</span>
     <span class="n">AR_DRG_v10</span><span class="o">=</span><span class="s2">&quot;H07B&quot;</span><span class="p">,</span>
-    <span class="n">care_type</span><span class="o">=</span><span class="n">fastabf</span><span class="o">.</span><span class="n">Care_Type</span><span class="o">.</span><span class="n">acute_care_admitted_care</span><span class="p">,</span>
+    <span class="n">care_type</span><span class="o">=</span><span class="n">Care_Type</span><span class="o">.</span><span class="n">acute_care_admitted_care</span><span class="p">,</span>
     <span class="n">Pat_Postcode</span><span class="o">=</span><span class="s2">&quot;PC00&quot;</span><span class="p">,</span>
     <span class="n">ICU_hours_L3</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">bool_transfer_status</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">sex</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">bool_is_emergency_admission</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bool_foetal_distress_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
     <span class="n">bool_instrument_use_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bool_ppop_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bool_prima_flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">HAC1</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC2</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">HAC3</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC6</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC7</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> 
-    <span class="n">HAC8</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC9</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC10</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC11</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC12</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">HAC13</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC14</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC15p2</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">Charlson_Score</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">HAC1</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC2</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">HAC3</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC4</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC6</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC7</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC8</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">HAC9</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC10</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC11</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC12</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC13</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">HAC14</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+    <span class="n">HAC15p2</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">Charlson_Score</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
     <span class="n">Pat_private_Flag</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">EST_Remoteness_Cat</span><span class="o">=</span><span class="n">Remoteness_Category_RA16</span><span class="o">.</span><span class="n">Inner_Regional</span><span class="p">)</span>
+    <span class="n">EST_Remoteness_Cat</span><span class="o">=</span><span class="n">Remoteness_Category_RA16</span><span class="o">.</span><span class="n">Inner_Regional</span><span class="p">,</span>
 
+<span class="p">)</span>
 <span class="n">abf_price</span> <span class="o">=</span> <span class="n">aar</span><span class="o">.</span><span class="n">get_abf_price</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The abf price is </span><span class="si">{</span><span class="n">abf_price</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div></p>
 <div class="admonition check">
 <p class="admonition-title">Nicely done!</p>
