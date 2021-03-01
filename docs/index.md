@@ -37,6 +37,9 @@ streamline the computation of ABF activities as per the National Efficient Price
     You can follow along in the quick start example via a code editor, python commandline or a jupyter notebook
 
 
+!!! info "Version"
+    fastABF requires `python 3.7` or higher. 
+
 
 ## Quick-start
 Lets see how you can get started using fastABF in under 5 minutes! 

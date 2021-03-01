@@ -161,10 +161,12 @@ fastabf
 ```
 ### Convenience functions and interfaces
 As you may observe from the input parameters in the cases above, they use 
-specific classes/data types that were created for convenience. These convenience functions help reduce the need to remember the METeOR parameter values thereby reducing errors and speeding up code development. 
+specific classes/data types that were created for convenience. These convenience interfaces help avoid having to remember the METeOR parameter values thereby reducing errors and speeding up code development. 
+
 These user friendly classes and routines can be found at the following locations in the library. 
 
-#### Structure of the fastABF library
+**Structure of the fastABF library** 
+
 A simplified overview for users of this library is as follows
 ``` 
 .
@@ -173,11 +175,10 @@ A simplified overview for users of this library is as follows
     └── charlson_class.py (computes the charlson complexity, if it is not known)
     └── helper_remoteness_mappings.py (computes remoteness categories)
 ```
-The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
-Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. 
 
 #### Data types
-The `datatypes` module contains user friendly mappings to several of the METeOR classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on data types.
+The `datatypes` module contains user friendly mappings to several of the METeOR classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on [data types](datatypes.md).
+
 ``` python
 class ABF_Service_Category(Enum)
 class Care_Type(Enum)  
@@ -195,3 +196,8 @@ class Stay_Category(Enum)
 *[METeOR]:  Metadata online registry 
 *[ABF]: Activity based funding
 *[NEP]: National efficient price
+
+
+#### Helper functions
+The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
+Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. 
