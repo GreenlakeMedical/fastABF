@@ -26,7 +26,7 @@ def helper_get_stay_category(
         ValueError: if an unexpected error occurs
 
     Returns:
-        StayCategory -- [description]
+        Stay_Category -- [description]
     """
     # same day stay cat
     if bool_same_day_flag and dal_admitted_acute.bool_is_same_day_drg(AR_DRG_v10):

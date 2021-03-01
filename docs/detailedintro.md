@@ -84,10 +84,6 @@ Parameters required
         Separation_Date: str,
         AN_SNAP_v4: str,
 
-        # [METeOR id: 269976] True if admitted patient transferred from another hospital.
-        # bool_transfer_status: bool,
-        # sex: int,  # [METeOR id: 635126]
-
         # [METeOR id: 269986] True if admission occurred on an emergency basis
         patient_leave_days: float = 0,
         Pat_Postcode: str = "",  # Format PCNNNN, METeOR id: 429894
@@ -150,9 +146,6 @@ Parameters required
             Indigenous_Status_Category.Unknown_or_not_stated,
         Multiple_Healthcare_Provider_Indicator: bool = False,
 
-        # Set to True if the patient is an eligible private patient
-        # Pat_private_Flag: bool = False,
-
         Pat_Covid19_Flag: bool = False,
             care_type: Care_Type = Care_Type.acute_care_admitted_care
 ```
@@ -168,10 +161,13 @@ fastabf
 ```
 ### Convenience functions and interfaces
 As you may observe from the input parameters in the cases above, they use 
-specific classes/data types that were created for convenience. These convenience functions help reduce the need to remember the METeOR parameter values thereby reducing errors and speeding up code development. 
+specific classes/data types that were created for convenience. These convenience interfaces help avoid having to remember the METeOR parameter values thereby reducing errors and speeding up code development. 
+
 These user friendly classes and routines can be found at the following locations in the library. 
 
-#### Structure of the fastABF library
+**Structure of the fastABF library** 
+
+A simplified overview for users of this library is as follows
 ``` 
 .
 ├── datatypes.py (user friendly interfaces to data types used - more info below)
@@ -179,21 +175,19 @@ These user friendly classes and routines can be found at the following locations
     └── charlson_class.py (computes the charlson complexity, if it is not known)
     └── helper_remoteness_mappings.py (computes remoteness categories)
 ```
-The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
-Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. 
 
 #### Data types
-The `datatypes` module contains user friendly mappings to several of the METeOR classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on data types.
+The `datatypes` module contains user friendly mappings to several of the METeOR classes. Instead of having to remember formally designated numbers, you can use these convenient interfaces in your own code.  For the details of the possible values for each category, please refer to the specific section on [data types](datatypes.md).
+
 ``` python
-class Sex_Category(Enum):
-class MDC_Type(Enum):
-class ABF_Service_Category(Enum):
-class Remoteness_Category_RA16(Enum):
-class Hosp_State_Category(Enum):
-class Care_Type_General(Enum):  # METeOR id: 270174
-class Care_Type(Enum):  # As the original METeOR id: 270174 has
-class Indigenous_Status_Category(Enum):
-class StayCategory(Enum):
+class ABF_Service_Category(Enum)
+class Care_Type(Enum)  
+class Hosp_State_Category(Enum)
+class Indigenous_Status_Category(Enum)
+class MDC_Type(Enum)
+class Remoteness_Category_RA16(Enum)
+class Sex_Category(Enum)
+class Stay_Category(Enum)
 ```
 
 
@@ -202,3 +196,8 @@ class StayCategory(Enum):
 *[METeOR]:  Metadata online registry 
 *[ABF]: Activity based funding
 *[NEP]: National efficient price
+
+
+#### Helper functions
+The Charlson class helps compute the Charlson complexity in case it is not known apriori. 
+Similarly the remoteness mappings help automatically use the right order of priorities to assign a remoteness category to an episode. 

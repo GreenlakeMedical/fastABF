@@ -7,6 +7,7 @@ theme:
                 - navigation.indexes
         
         favicon: images/favicon.png
+        custom_dir: overrides
 
 plugins:
         - search
@@ -19,19 +20,21 @@ markdown_extensions:
         - pymdownx.highlight
         - pymdownx.superfences
 
-
 repo_url: https://github.com/GreenlakeMedical/fastABF
-
+repo_name: GitHub Repository
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
       link: mailto:<contact@greenlakemedical.ai>
-
+    - icon: fontawesome/solid/link
+      link: https://www.greenlakemedical.ai
+    - icon: fontawesome/brands/github
+      link: https://github.com/GreenlakeMedical/fastABF/
 copyright: Copyright &copy; 2020 - 2021 GreenlakeMedical
-
 
 nav:
 - fastABF: index.md
 - detailedintro.md
 - globalvariables.md
-- contributors.md
+- Data types: datatypes.md
+- For Contributors: contributors.md
