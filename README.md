@@ -32,3 +32,14 @@ streamline the computation of ABF activities as per the National Efficient Price
 It is assumed that you are familiar with 
 - python 
 - the terminology and concepts of ABF.
+
+## Attribution
+
+Independent Hospital Pricing Authority material used 'as supplied', under a Creative Commons BY Attribution 3.0 Australia licence.
+
+
+**Sources**
+
+- [National efficient price determinatino 2020-21](https://www.ihpa.gov.au/sites/default/files/publications/national_efficient_price_determination_2020-21.pdf)
+- [Pricing and funding for safety and quality](https://www.ihpa.gov.au/sites/default/files/publications/pricing_and_funding_for_safety_and_quality_-_hacs.pdf)
+
