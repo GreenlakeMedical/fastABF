@@ -84,6 +84,18 @@ print(f"The abf price is {abf_price}")
 !!! Tip "Important"
     Please note that there are a few values that are unique to each hospital and must be set  accordingly. They affect the price computations but would not need to be changed very often. Refer to the [global variables ](globalvariables.md) section to learn more.
 
+
+## Attribution
+
+Independent Hospital Pricing Authority material used 'as supplied', under a Creative Commons BY Attribution 3.0 Australia licence.
+
+
+**Sources**
+
+- [National efficient price determinatino 2020-21](https://www.ihpa.gov.au/sites/default/files/publications/national_efficient_price_determination_2020-21.pdf)
+- [Pricing and funding for safety and quality](https://www.ihpa.gov.au/sites/default/files/publications/pricing_and_funding_for_safety_and_quality_-_hacs.pdf)
+
+
 ## Licensing
 This project is licensed under the **open source** terms of the AGPLv3.0 license. 
 
