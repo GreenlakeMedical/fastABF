@@ -50,30 +50,31 @@ That installs fastabf.  Now we get on with using it.
 
 Open up a python shell or notebook and type in the following (or copy-paste it from the box below)
 ``` python
-import fastabf
 
 from fastabf.datatypes import (ABF_Service_Category, Care_Type,
-                            Remoteness_Category_RA16)
+                               Remoteness_Category_RA16)
 from fastabf.pipelines.nwau_admitted_acute import Admitted_Acute_Record
 
-aar = fastabf.Admitted_Acute_Record(
+aar = Admitted_Acute_Record(
     Birth_Date="23/12/1990",
     Admission_Date="25/09/2020",
     Separation_Date="30/09/2020",
     AR_DRG_v10="H07B",
-    care_type=fastabf.Care_Type.acute_care_admitted_care,
+    care_type=Care_Type.acute_care_admitted_care,
     Pat_Postcode="PC00",
     ICU_hours_L3=0,
     bool_transfer_status=False,
     sex=2, bool_is_emergency_admission=False, bool_foetal_distress_flag=False,
     bool_instrument_use_flag=False, bool_ppop_flag=False, bool_prima_flag=False,
-    HAC1=False, HAC2=True, HAC3=False, HAC4=False, HAC6=False, HAC7=False, 
-    HAC8=False, HAC9=False, HAC10=False, HAC11=False, HAC12=False,
-    HAC13=False, HAC14=False, HAC15p2=False, Charlson_Score=0,
+    HAC1=False, HAC2=True, HAC3=False, HAC4=False, HAC6=False, HAC7=False, HAC8=False,
+    HAC9=False, HAC10=False, HAC11=False, HAC12=False, HAC13=False, HAC14=False,
+    HAC15p2=False, Charlson_Score=0,
     Pat_private_Flag=False,
-    EST_Remoteness_Cat=Remoteness_Category_RA16.Inner_Regional)
+    EST_Remoteness_Cat=Remoteness_Category_RA16.Inner_Regional,
 
+)
 abf_price = aar.get_abf_price()
+print(f"The abf price is {abf_price}")
 ```
 
 !!! check "Nicely done!"
@@ -82,6 +83,18 @@ abf_price = aar.get_abf_price()
 
 !!! Tip "Important"
     Please note that there are a few values that are unique to each hospital and must be set  accordingly. They affect the price computations but would not need to be changed very often. Refer to the [global variables ](globalvariables.md) section to learn more.
+
+
+## Attribution
+
+Independent Hospital Pricing Authority material used 'as supplied', under a Creative Commons BY Attribution 3.0 Australia licence.
+
+
+**Sources**
+
+- [National efficient price determinatino 2020-21](https://www.ihpa.gov.au/sites/default/files/publications/national_efficient_price_determination_2020-21.pdf)
+- [Pricing and funding for safety and quality](https://www.ihpa.gov.au/sites/default/files/publications/pricing_and_funding_for_safety_and_quality_-_hacs.pdf)
+
 
 ## Licensing
 This project is licensed under the **open source** terms of the AGPLv3.0 license. 
