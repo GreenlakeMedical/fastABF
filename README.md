@@ -40,6 +40,6 @@ Independent Hospital Pricing Authority material used 'as supplied', under a Crea
 
 **Sources**
 
-- [National efficient price determinatino 2020-21](https://www.ihpa.gov.au/sites/default/files/publications/national_efficient_price_determination_2020-21.pdf)
+- [National efficient price determination 2020-21](https://www.ihpa.gov.au/sites/default/files/publications/national_efficient_price_determination_2020-21.pdf)
 - [Pricing and funding for safety and quality](https://www.ihpa.gov.au/sites/default/files/publications/pricing_and_funding_for_safety_and_quality_-_hacs.pdf)
 
